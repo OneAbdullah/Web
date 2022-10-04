@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <title>Image Binarization - Home</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
+        </head>
+        <body>
+            <br><br>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="card">
+                            <div class="card-head text-center">
+                                Upload Image To Binarize
+                            </div>
+                            <div class="card-body">
+                                <form method="post" action="{% url 'return' %}" enctype="multipart/form-data" id="form1">{% csrf_token %}
+                                    <input type="file" class="form-control" name="upd" accept="image/*">
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary" type="submit" form="form1">
+                                    Upload
+                                </button>
+                                <button class="btn btn-primary" type="button" onclick="window.location.href='/suggest'">
+                                    Add Suggestions
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+
+    
+    </html>
